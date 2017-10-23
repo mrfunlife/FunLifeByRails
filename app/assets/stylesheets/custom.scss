@@ -329,7 +329,8 @@ a {
 
 .w3-button:hover {
   color: #000 !important;
-  background-color: #ccc !important
+
+  background-color: #4267b2 !important
 }
 
 .w3-btn, .w3-btn-floating, .w3-btn-floating-large, .w3-closenav, .w3-opennav, .w3-btn-block, .w3-button {
@@ -472,7 +473,7 @@ ul.w3-ul li:last-child {
 }
 
 .w3-navbar .w3-dropdown-hover:hover, .w3-navbar .w3-dropdown-hover:first-child, .w3-navbar .w3-dropdown-click:hover {
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000
 }
 
@@ -489,7 +490,7 @@ ul.w3-ul li:last-child {
 }
 
 .w3-navblock .w3-dropdown-hover:hover, .w3-navblock .w3-dropdown-hover:first-child, .w3-navblock .w3-dropdown-click:hover {
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000
 }
 
@@ -563,7 +564,7 @@ ul.w3-ul li:last-child {
 }
 
 .w3-sidenav .w3-dropdown-hover:hover, .w3-sidenav .w3-dropdown-hover:first-child, .w3-sidenav .w3-dropdown-click:hover, .w3-dropnav a:hover {
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000
 }
 
@@ -695,12 +696,12 @@ ul.w3-ul li:last-child {
 }
 
 .w3-dropdown-hover:first-child, .w3-dropdown-click:hover {
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000
 }
 
 .w3-dropdown-hover:hover > .w3-button:first-child, .w3-dropdown-click:hover > .w3-button:first-child {
-  background-color: #ccc;
+  background-color: #ffffff;
   color: #000
 }
 
@@ -1095,7 +1096,7 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 }
 
 .w3-top, .w3-bottom {
-  position: fixed;
+
   width: 100%;
   z-index: 1
 }
@@ -1921,7 +1922,7 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 
 .w3-white, .w3-hover-white:hover {
   color: #000 !important;
-  background-color: #fff !important
+  background-color: #ffffff !important
 }
 
 .w3-black, .w3-hover-black:hover {
