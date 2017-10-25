@@ -9,19 +9,65 @@
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
-body{
-  width: 100%;
-  background: -webkit-linear-gradient(left, #e9ebee, #e9ebee, #e9ebee, #e9ebee);
-  background: linear-gradient(to right, #e9ebee, #e9ebee, #e9ebee, #e9ebee);
-  background-size: 600% 100%;
-  -webkit-animation: HeroBG 20s ease infinite;
-  animation: HeroBG 20s ease infinite;
-}
 
 .color-bar {
   background-color: #4267b2;
   border-bottom: 1px solid #29487d;
   color: #fff;
+}
+.bg-funlife{
+  background:#f5f7f8;
+}
+.form-body{
+  background:#f5f7f8;
+  padding:20px;
+}
+
+.innter-form{
+  padding-top:20px;
+}
+.final-login li{
+  width:50%;
+}
+
+.nav-bar-text-style{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.social-login{
+  text-align:center;
+  font-size:12px;
+}
+.social-login p{
+  margin:15px 0;
+}
+.social-login ul{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+.social-login ul li{
+  width:33%;
+  float:left;
+  clear:fix;
+}
+.social-login ul li a{
+  font-size:13px;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 0;
+  display:block;
+}
+.social-login ul li:nth-child(1) a{
+  background:#3b5998;
+}
+.social-login ul li:nth-child(2) a{
+  background:#e74c3d;
+}
+.social-login ul li:nth-child(3) a{
+  background:#3698d9;
 }
 
 
