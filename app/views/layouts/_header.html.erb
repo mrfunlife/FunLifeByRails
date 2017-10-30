@@ -4,7 +4,7 @@
     <div class="w3-bar color-bar w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
-      <%= link_to "FunLife", root_path, class: "w3-bar-item w3-button w3-padding-large color-bar w3-left" %>
+      <%= link_to "FunLife", home_path, class: "w3-bar-item w3-button w3-padding-large color-bar w3-left" %>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
@@ -18,10 +18,14 @@
         </div>
       </div>
       <!--<button type="button" class="w3-bar-item w3-button w3-padding-large color-bar w3-right " data-toggle="modal" data-target="#login" data-backdrop="static">-->
-        <!--<i class="fa fa fa-angle-double-down w3-margin-right">-->
-        <!--</i>Login-->
+      <!--<i class="fa fa fa-angle-double-down w3-margin-right">-->
+      <!--</i>Login-->
       <!--</button>-->
-      <%= link_to "Login »", users_new_path, class: "w3-bar-item w3-button w3-padding-large color-bar w3-right" %>
+      <% if logged_in? %>
+          <%= link_to "Logout »", logout_path, class: "w3-bar-item w3-button w3-padding-large color-bar w3-right",method: :delete %>
+      <% else %>
+          <%= link_to "Login »", login_path, class: "w3-bar-item w3-button w3-padding-large color-bar w3-right" %>
+      <% end %>
       <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account"><img src="" class="w3-circle" style="height:25px;width:25px" alt="Avatar"></a>-->
     </div>
   </div>

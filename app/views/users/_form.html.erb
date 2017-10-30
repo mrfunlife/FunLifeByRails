@@ -1,74 +1,37 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="form-body">
-        <ul class="nav final-login nav-bar-text-style">
-          <li class="active bg-funlife center-funlife">
-            <a data-toggle="tab" href="#sectionA">Sign In</a>
-          </li>
-          <li class="bg-funlife center-funlife">
-            <a data-toggle="tab" href="#sectionB">Register!</a>
-          </li>
-        </ul>
-        <div class="tab-content">
-          <div id="sectionA" class="tab-pane fade in active">
-            <div class="innter-form">
-              <%= form_for(@user) do |f| %>
-                  <div class="form-group">
-                    <%= f.label :email %>
-                    <%= f.email_field :email, class:"form-control" %>
-                  </div>
-                  <div class="form-group">
-                    <%= f.label :password %>
-                    <%= f.password_field :password , class:"form-control"%>
-                  </div>
-                  <%= f.submit "Login", class: "btn btn-primary center-block form-control" %>
-              <% end %>
+    <div class="col-md-8 col-md-offset-2 form-body">
+      <div class="innter-form">
+        <%= form_for(@user, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages' %>
+            <div class="form-group">
+              <%= f.label :name,class:"text-white-bold" %>
+              <%= f.text_field :name, class: "form-control" %>
             </div>
-            <div class="social-login">
-              <p>- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
-              <ul>
-                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
-                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-              </ul>
+            <div class="form-group">
+              <%= f.label :email ,class:"text-white-bold"%>
+              <%= f.email_field :email, class: "form-control" %>
             </div>
-            <div class="clearfix"></div>
-          </div>
-
-          <div id="sectionB" class="tab-pane fade">
-            <div class="innter-form">
-              <%= form_for(@user) do |f| %>
-                  <div class="form-group">
-                    <%= f.label :name %>
-                    <%= f.text_field :name, class:"form-control" %>
-                  </div>
-                  <div class="form-group">
-                    <%= f.label :email %>
-                    <%= f.email_field :email, class:"form-control" %>
-                  </div>
-                  <div class="form-group">
-                    <%= f.label :password %>
-                    <%= f.password_field :password , class:"form-control"%>
-                  </div>
-                  <div class="form-group">
-                    <%= f.label :password_confirmation, "Confirmation" %>
-                    <%= f.password_field :password_confirmation , class:"form-control" %>
-                  </div>
-                  <%= f.submit "Create my account", class: "btn btn-danger center-block" %>
-              <% end %>
+            <div class="form-group">
+              <%= f.label :password ,class:"text-white-bold" %>
+              <%= f.password_field :password, class: "form-control" %>
             </div>
-            <div class="social-login">
-              <p>- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
-              <ul>
-                <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
-                <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
-                <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
-              </ul>
+            <div class="form-group">
+              <%= f.label :password_confirmation, "Confirmation",class:"text-white-bold" %>
+              <%= f.password_field :password_confirmation, class: "form-control" %>
             </div>
-          </div>
-        </div>
+            <%= f.submit "Create my account", class: "btn btn-danger center-block" %>
+        <% end %>
       </div>
+      <div class="social-login">
+        <p class="text-white">- - - - - - - - - - - - - Register With - - - - - - - - - - - - - </p>
+        <ul>
+          <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+          <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+          <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </div>

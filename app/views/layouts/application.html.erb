@@ -23,14 +23,26 @@
 </head>
 
 <body class="w3-theme-l5">
-<%= render 'layouts/header' %>
-<% flash.each do |message_type, message| %>
-    <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% if logged_in? %>
+    <%= render 'layouts/header' %>
+<% else %>
+  <div onclick = "changBgBody()"></div>
 <% end %>
-<%= yield %>
+<div class="container">
+  <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
+  <%= yield %>
+</div>
 
 
 <script>
+  
+    function changBgBody() {
+        document.getElementsByTagName('body').style.background = "url('bg_fox.jpg') no-repeat center center fixed";
+        document.getElementsByTagName('body').style.backgroundSize = "cover";
+    }
+
     // Accordion
     function myFunction(id) {
         var x = document.getElementById(id);
