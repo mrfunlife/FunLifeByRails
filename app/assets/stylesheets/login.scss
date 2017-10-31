@@ -21,8 +21,12 @@
 .form-body{
   background: rgba(0, 0, 0, 0.34);
   padding:20px;
+  //animation-name: example;
+  //animation-duration: 4s;
+}
+.change-color{
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 
 ///* Safari 4.0 - 8.0 */
@@ -36,11 +40,12 @@
 
 /* Standard syntax */
 @keyframes example {
-  0%   {left:0px; top:0px;}
-  25%  {left:200px; top:0px;}
-  50%  {left:200px; top:200px;}
-  75%  {left:0px; top:200px;}
-  100% {left:0px; top:0px;}
+  0%   {left: 0px;top: 0px}
+  25%  {background-color: #ff4b78
+  }
+  50%  {background-color: #98911d  }
+  75%  {background-color: #009688}
+  100% {background-color: #3f51b5}
 }
 
 .innter-form{
@@ -99,5 +104,22 @@
 }
 
 
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.text-size-small{
+  font-size: 13px;
+}
 
 //#4267b2

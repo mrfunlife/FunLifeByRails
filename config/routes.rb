@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
 
-  root 'sessions#new'
+  root 'home#home'
 
   get 'sessions/new'
 
