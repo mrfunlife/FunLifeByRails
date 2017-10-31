@@ -18,7 +18,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  padding-top: 80px;
+  padding-top: 50px;
 }
 
 .bg-login {
@@ -2231,3 +2231,11 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 .f-margin-top {
   margin-top: 40px;
 }
+
+.f-margin-top-medium {
+  margin-top: 20px;
+}
+.f-padding-left {
+  padding-left: 10px;
+}
+
