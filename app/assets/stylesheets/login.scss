@@ -24,6 +24,10 @@
   //animation-name: example;
   //animation-duration: 4s;
 }
+
+.f-padding-top {
+  padding-top: 50px;
+}
 .change-color{
   animation-name: example;
   animation-duration: 8s;
@@ -86,6 +90,15 @@
 .text-white {
   color: white;
 }
+
+
+.text-black-bold {
+  color: #0430b2;
+  font-weight: bold;
+}
+.text-black {
+  color: black;
+}
 .social-login ul li a{
   font-size:13px;
   color:#fff;
@@ -121,5 +134,7 @@
 .text-size-small{
   font-size: 13px;
 }
+
+
 
 //#4267b2

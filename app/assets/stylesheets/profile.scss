@@ -28,14 +28,13 @@
   position: absolute;
   bottom: 0px;
   right: 20px;
-  width: 260px;
+  width: 300px;
   height: 100px;
 
 }
 
 #button-info .button-default {
   position: absolute;
-  width: 185px;
   bottom: 5px;
   right: 0px;
   height: 26px;
@@ -45,10 +44,30 @@
   border-color: #4e5051;
 }
 
-#button-info .button-default:hover {
-  background: #2f4c84;
+#button-info .text-button-default {
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #45494f;
+  font-weight: bold;
 }
-//text:     color: #4b4f56;
+
+#button-info .text-notifi {
+  padding: 2px;
+  border-radius: 2px;
+  font-weight: bold;
+  float: right;
+  margin-top: 2.5px;
+  margin-right: 9px;
+  font-size: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #fa3e3e;
+}
+#button-info .button-default:hover {
+  background: #e0dde6;
+}
 
 #div-cover .cover {
   position: absolute;
@@ -69,7 +88,6 @@
   height: 45px;
   bottom: 0px;
   right: 0px;
-
 }
 
 
@@ -149,8 +167,8 @@
   background: #e9ebee;
   text-align: center;
   text-decoration: none;
-  padding: 11px 17px 0 18px;
-  height: 44px;
+  padding: 12.5px 17px 0 18px;
+  height: 45px;
   border-style: solid;
   border-width: 0.03px;
   border-top: none ;
