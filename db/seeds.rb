@@ -25,4 +25,10 @@ User.create!(name:  "Đồng Gia Lộc",
       password_confirmation: password,
       activated: true,
       activated_at: Time.zone.now)
+
+  user = User.first
+  5.times do
+    content = Faker::Lorem.sentence(5)
+    user.microposts.create!(content: content)
+  end
 end
