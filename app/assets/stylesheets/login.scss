@@ -19,12 +19,42 @@
   background:#f5f7f8;
 }
 .form-body{
-  background:#f5f7f8;
+  background: rgba(0, 0, 0, 0.34);
   padding:20px;
+  //animation-name: example;
+  //animation-duration: 4s;
+}
+
+.f-padding-top {
+  padding-top: 50px;
+}
+.change-color{
+  animation-name: example;
+  animation-duration: 8s;
+}
+
+///* Safari 4.0 - 8.0 */
+//@-webkit-keyframes example {
+//  0%   {background-color:red; left:0px; top:0px;}
+//  25%  {background-color:yellow; left:200px; top:0px;}
+//  50%  {background-color:blue; left:200px; top:200px;}
+//  75%  {background-color:green; left:0px; top:200px;}
+//  100% {background-color:red; left:0px; top:0px;}
+//}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {left: 0px;top: 0px}
+  25%  {background-color: #ff4b78
+  }
+  50%  {background-color: #98911d  }
+  75%  {background-color: #009688}
+  100% {background-color: #3f51b5}
 }
 
 .innter-form{
   padding-top:20px;
+
 }
 .final-login li{
   width:50%;
@@ -34,7 +64,6 @@
   font-size: 15px;
   font-weight: bold;
 }
-
 
 .social-login{
   text-align:center;
@@ -53,6 +82,23 @@
   float:left;
   clear:fix;
 }
+
+.text-white-bold {
+  color: white;
+  font-weight: bold;
+}
+.text-white {
+  color: white;
+}
+
+
+.text-black-bold {
+  color: #0430b2;
+  font-weight: bold;
+}
+.text-black {
+  color: black;
+}
 .social-login ul li a{
   font-size:13px;
   color:#fff;
@@ -69,6 +115,26 @@
 .social-login ul li:nth-child(3) a{
   background:#3698d9;
 }
+
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.text-size-small{
+  font-size: 13px;
+}
+
 
 
 //#4267b2

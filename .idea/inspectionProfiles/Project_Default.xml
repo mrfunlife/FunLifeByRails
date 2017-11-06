@@ -106,6 +106,7 @@
     <inspection_tool class="ProblematicWhitespace" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ReplaceAssignmentWithOperatorAssignmentJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="ReuseOfLocalVariableJS" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="Rubocop" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="RubyConvertAllHashesInFileInspections" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="SSBasedInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="StandardJS" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -113,7 +114,6 @@
       <option name="m_limit" value="30" />
     </inspection_tool>
     <inspection_tool class="StringLiteralBreaksHTMLJS" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="Stylelint" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="SwitchStatementWithNoDefaultBranchJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="TailRecursionJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="TextLabelInSwitchStatementJS" enabled="true" level="WARNING" enabled_by_default="true" />

@@ -1,6 +1,33 @@
-<h1>Editing User</h1>
+<% provide(:title, 'Exit User') %>
 
-<%= render 'form', user: @user %>
+<div class="container f-padding-top">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="innter-form">
+        <%= form_for(@user) do |f| %>
+            <%= render 'shared/error_messages' %>
+            <div class="form-group">
+              <%= f.label :name,class:"text-black-bold" %>
+              <%= f.text_field :name, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :email ,class:"text-black-bold"%>
+              <%= f.email_field :email, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password ,class:"text-black-bold" %>
+              <%= f.password_field :password, class: "form-control" %>
+            </div>
+            <div class="form-group ">
+              <%= f.label :password_confirmation, "Confirmation",class:"text-black-bold" %>
+              <%= f.password_field :password_confirmation, class: "form-control" %>
+            </div>
+            <div class="form-group f-padding-top">
+            <%= f.submit "Lưu thay đổi", class: "btn btn-primary center-block" %>
+            </div>
+        <% end %>
+      </div>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>

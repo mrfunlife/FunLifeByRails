@@ -17,8 +17,20 @@ html {
 
 body {
   margin: 0;
-  padding-top: 80px
+  height: 100%;
+  padding-top: 50px;
 }
+
+.bg-login {
+  background: url("bg_city.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
 
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block
@@ -26,6 +38,12 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
 
 audio, canvas, progress, video {
   display: inline-block
+}
+.match-parent {
+  width: 100%;
+  height: 100%;
+  background-image: url("bg_moutain.jpg");
+  background-size: 100%, 100%;
 }
 
 progress {
@@ -1458,7 +1476,7 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
 }
 
 .w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col {
-  padding: 0 8px
+  padding: 0 4px
 }
 
 .w3-spin {
@@ -2211,3 +2229,21 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
   }
 }
 
+.f-margin-top {
+  margin-top: 40px;
+}
+
+.f-margin-top-medium {
+  margin-top: 20px;
+}
+
+.f-padding-right {
+  padding-right: 10px;
+}
+.f-padding-left {
+  padding-left: 10px;
+}
+
+.background-final {
+  background-color: #e9ebee;
+}

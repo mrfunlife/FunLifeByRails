@@ -1,0 +1,38 @@
+<div class="container f-padding-top">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 form-body">
+      <div class="innter-form">
+        <%= form_for(:session, url: login_path) do |f| %>
+            <div class="form-group">
+              <%= f.label :email, class:"text-white-bold"%>
+              <%= f.email_field :email, class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password, class:"text-white-bold" %>
+              <%= link_to "(forgot password)", new_password_reset_path %>
+              <%= f.password_field :password, class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :remember_me, class: "checkbox inline w3-center" do %>
+                  <%= f.check_box :remember_me %>
+                  <span class="text-white text-size-small">Remember me on this computer</span>
+              <% end %>
+            </div>
+            <%= f.submit "Login", class: "btn btn-primary center-block form-control change-color" %>
+        <% end %>
+      </div>
+      <div class="social-login">
+        <p class="text-white">- - - - - - - - - - - - - Sign In With - - - - - - - - - - - - - </p>
+        <ul>
+          <li><a href=""><i class="fa fa-facebook"></i> Facebook</a></li>
+          <li><a href=""><i class="fa fa-google-plus"></i> Google+</a></li>
+          <li><a href=""><i class="fa fa-twitter"></i> Twitter</a></li>
+        </ul>
+      </div>
+      
+      <div class="f-margin-top w3-center text-white">New user? <%= link_to "Sign up now!", signup_path %></div>
+    </div>
+  </div>
+</div>
+
