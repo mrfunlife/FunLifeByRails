@@ -10,16 +10,15 @@
         <div id="cover" class="cover">
           <div class="info-profile">
             <div id="name">
-              <h4 class="text-white" >Đồng Gia</h4>
+              <h4 class="text-white">Đồng Gia</h4>
               <h5 class="text-white">(FunLife)</h5>
             </div>
 
             <div id="button-info">
-                <div id="button-default" class="button-default">
-
-               <%= link_to "Cập nhật thông tin",edit_user_path(current_user), class: "text-button-default",title:"Cập nhật thông tin" %>
-               <%= link_to "10+",edit_user_path(current_user), class: "text-notifi",title: "Cập nhật thông tin" %>
-                </div>
+              <div id="button-default" class="button-default">
+                <%= link_to "Cập nhật thông tin", edit_user_path(current_user), class: "text-button-default", title: "Cập nhật thông tin" %>
+                <%= link_to "10+", edit_user_path(current_user), class: "text-notifi", title: "Cập nhật thông tin" %>
+              </div>
 
             </div>
           </div>
@@ -144,70 +143,32 @@
             <div class="w3-card-2  w3-white">
               <div class="w3-container w3-padding">
                 <h6 class="w3-opacity">FunLife Social </h6>
-                <p contenteditable="true" id="post" class="w3-border w3-padding" placeholder="Bạn đang nghĩ gì?"></p>
-                <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button>
+                <%= form_for(@micropost) do |f| %>
+                    <%= f.text_area :content, placeholder: "Bạn đang nghĩ gì?...", id: "post", class: "field w3-border w3-padding", contenteditable: "true" %>
+                    <!--<button type="button" class="w3-button w3-theme f-margin-top-small"><i class="fa fa-pencil"></i>  Post</button>-->
+                    <%= f.submit "Post", class: "w3-button w3-theme f-margin-top-small" %>
+
+                    <%= f.file_field :picture,class:"f-margin-top-small w3-right",accept: 'image/jpeg,image/gif,image/png' %>
+                <% end %>
+
+                <script type="text/javascript">
+                    $('#micropost_picture').bind('change', function() {
+                        var size_in_megabytes = this.files[0].size/1024/1024;
+                        if (size_in_megabytes > 5) {
+                            alert('Maximum file size is 5MB. Please choose a smaller file.');
+                        }
+                    });
+                </script>
+
               </div>
             </div>
           </div>
         </div>
 
+
         <% if @user.microposts.any? %>
             <%= render @microposts %>
         <% end %>
-
-      <!--<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>-->
-          <!--<img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/14080058_1375193189162262_5980865597750089307_n.jpg?oh=536051238f892af86edc98c66f8f20be&oe=5AAE92B5" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
-          <!--<span class="w3-right w3-opacity">1 min</span>-->
-          <!--<h4>John Doe</h4><br>-->
-          <!--<hr class="w3-clear">-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-            <!--dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
-            <!--ea commodo consequat.</p>-->
-          <!--<div class="w3-row-padding" style="margin:0 -16px">-->
-            <!--<div class="">-->
-              <!--<img src="https://znews-photo-td.zadn.vn/w660/Uploaded/wyhktpu/2017_10_17/image001_12.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">-->
-            <!--</div>-->
-            <!--&lt;!&ndash;<div class="w3-half">&ndash;&gt;-->
-              <!--&lt;!&ndash;<img src="https://www.google.com.vn/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjXyLfmxYTXAhWFGJQKHQNNCpMQjRwIBw&url=https%3A%2F%2Fwww.promotionandarts.org%2Fevents-festivals%2Flight-city&psig=AOvVaw1MpjjOCSlsC03rholV4jLD&ust=1508772528401425" style="width:100%" alt="Nature" class="w3-margin-bottom">&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--</div>-->
-          <!--<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like-->
-          <!--</button>-->
-          <!--<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment-->
-          <!--</button>-->
-        <!--</div>-->
-
-        <!--<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>-->
-          <!--<img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/14080058_1375193189162262_5980865597750089307_n.jpg?oh=536051238f892af86edc98c66f8f20be&oe=5AAE92B5" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
-          <!--<span class="w3-right w3-opacity">16 min</span>-->
-          <!--<h4>Jane Doe</h4><br>-->
-          <!--<hr class="w3-clear">-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-            <!--dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
-            <!--ea commodo consequat.</p>-->
-          <!--<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like-->
-          <!--</button>-->
-          <!--<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment-->
-          <!--</button>-->
-        <!--</div>-->
-
-        <!--<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>-->
-          <!--<img src="https://scontent.fhan5-3.fna.fbcdn.net/v/t1.0-9/14080058_1375193189162262_5980865597750089307_n.jpg?oh=536051238f892af86edc98c66f8f20be&oe=5AAE92B5" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">-->
-          <!--<span class="w3-right w3-opacity">32 min</span>-->
-          <!--<h4>Angie Jane</h4><br>-->
-          <!--<hr class="w3-clear">-->
-          <!--<p>Have you seen this?</p>-->
-          <!--<img src="https://www.google.com.vn/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjXyLfmxYTXAhWFGJQKHQNNCpMQjRwIBw&url=https%3A%2F%2Fwww.promotionandarts.org%2Fevents-festivals%2Flight-city&psig=AOvVaw1MpjjOCSlsC03rholV4jLD&ust=1508772528401425" style="width:100%" class="w3-margin-bottom">-->
-          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
-            <!--dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
-            <!--ea commodo consequat.</p>-->
-          <!--<button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Like-->
-          <!--</button>-->
-          <!--<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment-->
-          <!--</button>-->
-        <!--</div>-->
-
-        <!-- End Middle Column -->
       </div>
 
 
@@ -263,3 +224,5 @@
   <!-- End Page Container -->
 </div>
 <br>
+
+
