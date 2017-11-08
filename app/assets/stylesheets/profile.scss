@@ -33,7 +33,7 @@
 
 }
 
-#button-info .button-default {
+.button-default {
   position: absolute;
   bottom: 5px;
   right: 0px;
@@ -53,7 +53,7 @@
   font-weight: bold;
 }
 
-#button-info .text-notifi {
+.text-notifi {
   padding: 2px;
   border-radius: 2px;
   font-weight: bold;
@@ -198,4 +198,19 @@ ul#topTab li a.current:hover {
 .f-font-time-post {
   font-size: 12px;
   font-style: italic;
+}
+
+.f-button {
+  color: #000;
+  background-color: #f7f9fc;
+  border: solid;
+  padding: 8px 16px;
+  border-color: #d9dadd;
+  border-width: 0.5px;
+
+}
+.f-button:hover {
+  background-color: #f7f9fc;
+  border: solid;
+  border-color: #e9ebee;
 }
